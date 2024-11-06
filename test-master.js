@@ -63,7 +63,7 @@
           in_foo = this.from_yay;
         }
         assert.equal(in_foo, "i'm in foo");
-        assert.equal(this.from_yay, "i'm in foo");
+        assert.equal(this.from_yay, undefined);
       }
       yay();
       foo();
@@ -93,11 +93,11 @@
       }
   
       yay();
-      assert.equal(this.counter, "???");
+      assert.equal(this.counter, undefined);
       yay();
-      assert.equal(this.counter, "???");
+      assert.equal(this.counter, undefined);
       yay();
-      assert.equal(this.counter, "???");
+      assert.equal(this.counter, undefined);
     });
   
     QUnit.test("Inner scope can access outer scope", function(assert){
@@ -107,7 +107,7 @@
         return im_outside + im_inside;
       }
   
-      assert.equal(yay(), "???");
+      assert.equal(yay(), "alphaomega");
     });
   
     QUnit.test("Functions retain outer scope references between calls.", function(assert){
