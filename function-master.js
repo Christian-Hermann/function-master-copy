@@ -17,8 +17,27 @@ return values;
 //////////////////////////////////////////////////////////////////////
 
 function keysToString(object) {
+// intitialize empty string to hold value
+var string = ""
+// acccess each key in the loop using a for..in loop
+for (var key in object){
+// use output strong += each key plus space for iteration
+    string += key + " "
+}
+// return all of its keys in a string
+// use trim method to cut extra space
+return string.trim();
+
+
 
 }
+
+/*
+I: takes in an object
+O: returns all of the keys in a single string each seperated by a space
+C: use a for loop
+E: 
+*/
 
 //////////////////////////////////////////////////////////////////////
 // Function 3 - Values to String /////////////////////////////////////
