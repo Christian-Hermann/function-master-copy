@@ -70,9 +70,16 @@ for(let key in object){
 //////////////////////////////////////////////////////////////////////
 
 function arrayOrObject(collection) {
-    
+// check to see if the collection is an array
+    if(Array.isArray(collection)){
+// return array
+        return 'array';
+// check to see if collection is an object
+    } else if ( typeof collection === 'object' && collection !== null){
+// return object
+        return 'object';
+    }
 }
-
 //////////////////////////////////////////////////////////////////////
 // Function 5 - Capitalize Word //////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
