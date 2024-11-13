@@ -44,7 +44,25 @@ E:
 //////////////////////////////////////////////////////////////////////
 
 function valuesToString(object) {
-    
+
+// initialize an empty string to hold value
+    let newString = '';
+
+// iterate over the objects properties
+for(let key in object){
+// check and see if the value is a string
+    if(typeof object[key] === 'string'){
+//  if result is not empty, add a space before adding next value
+        if(newString){           
+            newString += ' ';
+        }
+// add the string value to the new string        
+        newString += object[key];
+    }
+
+}
+// return new string
+     return newString
 }
 
 //////////////////////////////////////////////////////////////////////
