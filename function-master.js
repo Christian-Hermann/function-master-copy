@@ -85,15 +85,28 @@ function arrayOrObject(collection) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeWord(string) {
-    
+
+// capializa the first letter of the word
+// combine the capitalized letter with the rest of the wprd
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 6 - Capitalize All Words /////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-function capitalizeAllWords(string) {
-    
+function capitalizeAllWords(string){
+// set new variable equal to the string split
+    let newString = string.split(' ');
+// loop through the new split string
+for(let i = 0; i < newString.length; i++){
+// new string iteration make first letter uppercase then add
+// to string startng at [1] index
+newString[i] = newString[i][0].toUpperCase() + newString[i].substr(1)
+}
+// return new string joined back together
+return newString.join(' ');
+
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -101,6 +114,8 @@ function capitalizeAllWords(string) {
 //////////////////////////////////////////////////////////////////////
 
 function welcomeMessage(object) {
+const name = object.name.charAt(0).toUpperCase() + object.name.slice(1);
+return "Welcome " + name + "!";
 
 }
 
