@@ -201,6 +201,11 @@ function nonFriends(name, array) {
 
 function updateObject(object, key, value) {
 
+// update the object with key and set to new value
+// if key does not exist update when returned
+object[key] = value
+return object
+
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -216,6 +221,9 @@ function removeProperties(object, array) {
 //////////////////////////////////////////////////////////////////////
 
 function dedup(array) {
+// use a set to remove any ddoubles
+// then convert back to an array
+    return Array.from(new Set(array));
 
 }
 
