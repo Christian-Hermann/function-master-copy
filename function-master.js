@@ -134,7 +134,14 @@ return name + " is a " + species;
 //////////////////////////////////////////////////////////////////////
 
 function maybeNoises(object) {
-
+    // chekc to see if object.noises is an array and not an empty array
+if(Array.isArray(object.noises) && object.noises.length > 0){
+    // if object.noises is an array return a string spearated by spaces
+    return object.noises.join(" ");
+    // else if not an array return 
+} else {
+    return "there are no noises";
+}
 }
 
 //////////////////////////////////////////////////////////////////////
