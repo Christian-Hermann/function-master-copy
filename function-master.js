@@ -149,7 +149,10 @@ if(Array.isArray(object.noises) && object.noises.length > 0){
 //////////////////////////////////////////////////////////////////////
 
 function hasWord(string, word) {
-
+// initailize a new variable and split the string into words with spaces
+var wordArray = string.split(' ');
+// check to see if word is included in wordArray
+return wordArray.includes(word)
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -157,7 +160,10 @@ function hasWord(string, word) {
 //////////////////////////////////////////////////////////////////////
 
 function addFriend (name, object) {
-
+// push name onto object friends array
+object.friends.push(name);
+// return object
+return object
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -165,6 +171,19 @@ function addFriend (name, object) {
 //////////////////////////////////////////////////////////////////////
 
 function isFriend(name, object) {
+// check to see if obbjet has a friends property and is an array
+if (Array.isArray(object.friends)){
+// iterate through the friends array
+    for (let i = 0; i < object.friends.length; i++){
+// check to see if name is found in the array and return true
+        if (object.friends[i] === name) {
+            return true
+        }
+    }
+}
+// if not return false
+ return false
+
 
 }
 
