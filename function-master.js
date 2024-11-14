@@ -124,7 +124,9 @@ return "Welcome " + name + "!";
 //////////////////////////////////////////////////////////////////////
 
 function profileInfo(object) {
-
+const name = object.name.charAt(0).toUpperCase() + object.name.slice(1);
+const species = object.species.charAt(0).toUpperCase() + object.species.slice(1);
+return name + " is a " + species;
 }
 
 //////////////////////////////////////////////////////////////////////
