@@ -213,7 +213,13 @@ return object
 //////////////////////////////////////////////////////////////////////
 
 function removeProperties(object, array) {
-
+// loop through the properties array
+ for (var i = 0; i < array.length; i++){
+// delete any properties on the objects array
+    delete object[array[i]] 
+ }
+ // return object
+ return object;
 }
 
 //////////////////////////////////////////////////////////////////////
