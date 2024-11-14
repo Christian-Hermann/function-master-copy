@@ -191,7 +191,20 @@ if (Array.isArray(object.friends)){
 // Function 13 - Non-Friends /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-function nonFriends(name, array) {
+function nonFriends(name, array){
+//initialize an array to store non friends list
+let noFriendList = [];
+// loop through the array of people
+for (let i = 0; i < array.length; i++){
+    let person = array[i];
+
+// if person's name is not the same as the input and the friends name
+// is not found in their friends list push to no friends list
+    if (person.name !== name && !person.friends.includes(name)){
+        noFriendList.push(person.name);
+    }
+}
+return noFriendList
 
 }
 
